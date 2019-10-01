@@ -1,0 +1,18 @@
+;
+; BIND data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	debian.marion-pages.local. root.marion-pages.local. (
+			2		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+@	IN	NS	debian.marion-pages.local.
+
+$ORIGIN 202.10.in-addr.arpa.
+20.18 IN PTR debian.marion-pages.local.
+20.18 IN PTR smtp.marion-pages.local.
+20.18 IN PTR pop.marion-pages.local.
+20.18 IN PTR imap.marion-pages.local.

@@ -1,0 +1,9 @@
+zone "marion-pages.local" {
+        type master;
+        file "/etc/bind/db.marion-pages.local";
+};
+
+zone "202.10.in-addr.arpa" {
+	type master;
+	file "/etc/bind/db.10.202";
+};
