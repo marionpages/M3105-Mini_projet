@@ -1,9 +1,17 @@
+// // 
+Do any local configuration here 
+// 
+
+// Consider adding the 1918 zones here, if they are not used in your 
+// organization 
+//include "/etc/bind/zones.rfc1918"; 
+
 zone "marion-pages.local" {
         type master;
         file "/etc/bind/db.marion-pages.local";
-};
-
-zone "202.10.in-addr.arpa" {
-	type master;
-	file "/etc/bind/db.10.202";
+}; 
+// Reverse zone de marion-pages.local 
+zone "0.17.172.in-addr.arpa" {
+        type master;
+        file "/etc/bind/db.172.10.0"; 
 };

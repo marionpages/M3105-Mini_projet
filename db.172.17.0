@@ -1,0 +1,16 @@
+root@654489d3dada:/etc/bind# cat db.172.17.0
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL 1h;
+@	IN	SOA	debian.marion-pages.local mail.marion-pages.local (
+		2019101501  	   ; Serial
+		604800		; Refresh
+		86400			; Retry
+		2419200		; Expire
+		604800 )		; Negative Cache TTL
+;
+marion-pages.local.	IN	NS	debian.marion-pages.local.
+debian.marion-pages.local.  IN	A	172.17.0.2 
+
+2 IN PTR debian.marion-pages.local.
